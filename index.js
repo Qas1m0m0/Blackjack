@@ -1,14 +1,18 @@
 let firstCard = 6;
 let secondCard = 3;
-
 let sumOfCards = firstCard + secondCard;
-
+let hasBlackJack = false;
+let isAlive = true
+let message = ' '
 
 if (sumOfCards < 21) {
-    console.log('Do you want to draw a new card? 🃏')
+    message = 'Do you want to draw a new card? 🃏'
 } else if (sumOfCards === 21) {
-    console.log(`You've got Blackjack! 🂫`)
+    message = `You've got Blackjack! 🂫`;
+    hasBlackJack = true
 } else {
-    console.log(`You've lost the game. Unlucky 👎🏼`)
+    message = `You've lost the game. Unlucky 👎🏼`
+    isAlive = false;
+
 }
  console.log(sumOfCards);
