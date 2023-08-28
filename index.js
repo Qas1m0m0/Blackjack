@@ -4,8 +4,11 @@ let sumOfCards = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true
 let message = ' '
+let messageEl = document.getElementById('message-el');
+let sumEl = document.querySelector('#sum-el');
 
-function startGame() { 
+function startGame() {  
+    sumEl.textContent = 'Sum: ' + sumOfCards;
     if (sumOfCards < 21) {
         message = 'Do you want to draw a new card? 🃏'
     } else if (sumOfCards === 21) {
@@ -15,5 +18,6 @@ function startGame() {
         message = `You've lost the game. Unlucky 👎🏼`
         isAlive = false;
     }
-    console.log(message);
+    messageEl.textContent = message;
+   
 }
