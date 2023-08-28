@@ -5,14 +5,15 @@ let hasBlackJack = false;
 let isAlive = true
 let message = ' '
 
-if (sumOfCards < 21) {
-    message = 'Do you want to draw a new card? 🃏'
-} else if (sumOfCards === 21) {
-    message = `You've got Blackjack! 🂫`;
-    hasBlackJack = true
-} else {
-    message = `You've lost the game. Unlucky 👎🏼`
-    isAlive = false;
-
+function startGame() { 
+    if (sumOfCards < 21) {
+        message = 'Do you want to draw a new card? 🃏'
+    } else if (sumOfCards === 21) {
+        message = `You've got Blackjack! 🂫`;
+        hasBlackJack = true
+    } else {
+        message = `You've lost the game. Unlucky 👎🏼`
+        isAlive = false;
+    }
+    console.log(message);
 }
- console.log(sumOfCards);
